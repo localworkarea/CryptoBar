@@ -1,0 +1,62 @@
+.footer {
+  display: none;
+  @media (max-width: em(700.98)){
+      display: block;
+      border-top: toRem(1) solid #EBEBEB;
+      background-color: white;
+      position: fixed;
+      z-index: 10;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+  }
+  // .footer__container
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @include adaptiveValue("padding-top", 10, 6,0,700,480);
+    padding-bottom: toRem(20);
+  }
+  // .footer__btn
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: toRem(8);
+    width: toRem(125);
+
+    ._icon-file {}
+    ._icon-personal {}
+    // .footer__btn_news
+    &_news {
+      @include adaptiveValue("font-size", 22, 19,0,700,480);
+    }
+    // .footer__btn_cabinet
+    &_cabinet {
+      @include adaptiveValue("font-size", 26, 21,0,700,480);
+    }
+  }
+  // .footer__btn-icon
+  &__btn-icon {
+    color: #1E88E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: toRem(32);
+    height: toRem(32);
+  }
+  // .footer__btn-txt
+  &__btn-txt {
+    color: #1E88E5;
+    @include adaptiveValue("font-size", 16, 10,0,700,480);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.24px;
+  }
+}
+
+
