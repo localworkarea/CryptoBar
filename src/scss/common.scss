@@ -6,3 +6,34 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 }
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	gap: toRem(5);
+	img {
+		width: toRem(44);
+		height: auto;
+	}
+}
+.logo-txt {
+	font-size: toRem(28);
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.14;
+	padding-top: toRem(2);
+	// .logo-txt__one
+	&__one {
+		color: #2D2B2B;
+	}
+	// .logo-txt__two
+	&__two {
+		color: #F2994A;
+	}
+	// .logo-txt__three
+	&__three {
+		color: white;
+	}
+}

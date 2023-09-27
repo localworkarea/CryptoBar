@@ -885,8 +885,13 @@
 
    // .article-buy__logo
   &__logo {
-    img {
-      @include adaptiveValue("width", 173, 142,0,1440,480);
+    .logo {
+      img {
+        @include adaptiveValue("width", 39, 32,0,1440,480);
+      }
+      .logo-txt {
+        @include adaptiveValue("font-size", 24, 20,0,1440,480);
+      }
     }
     @include adaptiveValue("margin-bottom", 45, 27,0,1440,480);
   }
@@ -1055,11 +1060,7 @@
         padding-top: toRem(24);
         margin: 0 auto;
     }
-    img {
-      @media (max-width:$mobileSmall){
-         width: toRem(167); 
-      }
-    }
+
 	}
   // .login__inputs
   &__inputs {

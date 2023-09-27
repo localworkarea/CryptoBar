@@ -234,6 +234,47 @@ textarea {
   appearance: none;
 }
 
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 0.3125rem;
+}
+
+.logo img {
+  width: 2.75rem;
+  height: auto;
+}
+
+.logo-txt {
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.14;
+  padding-top: 0.125rem;
+}
+
+.logo-txt__one {
+  color: #2D2B2B;
+}
+
+.logo-txt__two {
+  color: #F2994A;
+}
+
+.logo-txt__three {
+  color: white;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,18 +293,6 @@ textarea {
   -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3);
   padding: 7px 28px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .header__info {
@@ -1603,8 +1632,12 @@ textarea {
     padding-right: 2.75rem;
   }
 
-  .article-buy__logo img {
-    width: 10.8125rem;
+  .article-buy__logo .logo img {
+    width: 2.4375rem;
+  }
+
+  .article-buy__logo .logo .logo-txt {
+    font-size: 1.5rem;
   }
 
   .article-buy__logo {
@@ -1849,8 +1882,12 @@ textarea {
     padding-right: 1.6875rem;
   }
 
-  .article-buy__logo img {
-    width: 8.875rem;
+  .article-buy__logo .logo img {
+    width: 2rem;
+  }
+
+  .article-buy__logo .logo .logo-txt {
+    font-size: 1.25rem;
   }
 
   .article-buy__logo {
@@ -1925,6 +1962,12 @@ textarea {
   ._open-filter .articles__date {
     -ms-grid-column-span: 2;
     grid-column-end: 2;
+  }
+}
+
+@media (max-width: 56.31125em) and (max-height: 28.18625em) {
+  .header {
+    display: none;
   }
 }
 
@@ -2290,10 +2333,6 @@ textarea {
 
   .login__container {
     padding-bottom: 1.5rem;
-  }
-
-  .login__logo img {
-    width: 10.4375rem;
   }
 
   .inputs-login {
@@ -2926,15 +2965,27 @@ textarea {
     }
 }
 
-@supports (width: clamp( 8.875rem , 7.90625rem  +  3.2291666667vw , 10.8125rem )) {
-    .article-buy__logo img {
-      width: clamp( 8.875rem , 7.90625rem  +  3.2291666667vw , 10.8125rem );
+@supports (width: clamp( 2rem , 1.78125rem  +  0.7291666667vw , 2.4375rem )) {
+    .article-buy__logo .logo img {
+      width: clamp( 2rem , 1.78125rem  +  0.7291666667vw , 2.4375rem );
     }
 }
 
-@supports not (width: clamp( 8.875rem , 7.90625rem  +  3.2291666667vw , 10.8125rem )) {
-    .article-buy__logo img {
-      width: calc(8.875rem + 1.9375 * (100vw - 30rem) / 60);
+@supports not (width: clamp( 2rem , 1.78125rem  +  0.7291666667vw , 2.4375rem )) {
+    .article-buy__logo .logo img {
+      width: calc(2rem + 0.4375 * (100vw - 30rem) / 60);
+    }
+}
+
+@supports (font-size: clamp( 1.25rem , 1.125rem  +  0.4166666667vw , 1.5rem )) {
+    .article-buy__logo .logo .logo-txt {
+      font-size: clamp( 1.25rem , 1.125rem  +  0.4166666667vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.25rem , 1.125rem  +  0.4166666667vw , 1.5rem )) {
+    .article-buy__logo .logo .logo-txt {
+      font-size: calc(1.25rem + 0.25 * (100vw - 30rem) / 60);
     }
 }
 
