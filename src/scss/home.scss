@@ -833,6 +833,7 @@
   font-weight: 700;
   line-height: normal;
 
+  color: #FFF;
   border-radius: toRem(30);
   padding: toRem(4) toRem(12) toRem(5);
   margin: toRem(11) toRem(14);
@@ -855,15 +856,12 @@
   }
   
   &.tag-one {
-    color: #FFF;
     background-color: #007AFF;
   }
   &.tag-two {
-    color: #FFF;
     background-color: #F2994A;
   }
   &.tag-three {
-    color: #FFF;
     background-color: #242424;
   }
 }
@@ -1188,6 +1186,102 @@
       @include adaptiveValue("font-size", 28, 20,0,1440,768);
       @include adaptiveValue("font-size", 20, 16,3,768,480);
       font-weight: 400;
+    }
+  }
+}
+
+
+
+
+//=== PAGE 404 =================================================================================================
+.not-found {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  // .not-found__main
+  &__main {
+    display: flex;
+    flex-direction: column;
+  }
+  // .not-found__container
+  &__container {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: toRem(64);
+  }
+	// .not-found__logo
+	&__logo {
+    margin-top: toRem(32);
+	}
+  // .not-found__num
+  &__num {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    flex: 1;
+    padding: toRem(30) 0;
+  }
+  // .not-found__numb
+  &__numb {
+    color: #F2994A;
+    @include adaptiveValue("font-size", 200, 128,0,1440,480);
+    font-weight: 700;
+    line-height: calc(73/200);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-right", 32, 16,0,1440,480);
+    }
+  }
+  // .not-found__img
+  &__img {
+    @include adaptiveValue("width", 172, 99,0,1440,480);
+    height: auto;
+    @include adaptiveValue("margin-right", 20, 6,0,1440,480);
+  }
+  // .not-found__title
+  &__title {
+    color: #F2994A;
+    @include adaptiveValue("font-size", 48, 24,0,1440,480);
+    font-weight: 700;
+    line-height: 1.5;
+    @include adaptiveValue("margin-bottom", 20, 12,0,1440,480);
+  }
+  // .not-found__sub-title
+  &__sub-title {
+    text-align: center;
+    @include adaptiveValue("font-size", 32, 18,0,1440,480);
+    font-weight: 300;
+    line-height: 1;
+    max-width: toRem(462);
+    @include adaptiveValue("margin-bottom", 94, 60,0,1440,480);
+    @media (max-width:$mobileSmall){
+       line-height: 1.77; 
+    }
+  }
+  // .not-found__button
+  &__button {
+    border-radius: toRem(48);
+    background: #F2994A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include adaptiveValue("height", 74, 48,0,1440,480);
+    @include adaptiveValue("width", 448, 300,0,1440,480);
+
+    color: white;
+    text-align: center;
+    @include adaptiveValue("font-size", 32, 16,0,1440,480);
+    font-weight: 500;
+    line-height: 1;
+
+    transition: all .3s ease;
+    @media (any-hover: hover){
+      &:hover{
+        opacity: 0.85;
+      }
     }
   }
 }
