@@ -37,6 +37,10 @@
 		background: rgba(255, 255, 255, 0.50);
 		box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.30);
 		padding: toRem(7) toRem(32) toRem(7) toRem(7);
+
+		.page-login & {
+			display: none;
+		}
 	}
 	// .header__buy
 	&__buy {

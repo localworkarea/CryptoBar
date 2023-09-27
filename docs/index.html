@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<title>HomePage</title>
+	<title>News Feed</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230926212423">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230927140858">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,8 +37,6 @@
 									</button>
 									<h2 class="head-filters__title">Filters</h2>
 								</div>
-							</div>
-							<div class="filters__content">
 								<div class="filters__search search-filters">
 									<div class="search-filters__body">
 										<button type="button" class="search-filters__icon _icon-search"></button>
@@ -46,6 +44,8 @@
 										<button type="button" class="search-filters__btn _icon-close"></button>
 									</div>
 								</div>
+							</div>
+							<div class="filters__content">
 								<div class="filters__categories categories-filters">
 									<h3 class="categories-filters__title">Feed Categories</h3>
 									<div class="categories-filters__body">
@@ -162,6 +162,22 @@
 									</div>
 									<button type="button" class="articles-filters__btn">Show all results</button>
 								</div>
+								<div class="search-results not-found-mob">
+									<div class="search-results__body">
+										<div class="search-results__img">
+											<img src="img/icons/not-found.svg" alt="sorry, not found">
+										</div>
+										<p class="search-results__title">Sorry, nothing was found for your request</p>
+									</div>
+								</div>
+								<div class="search-results no-articles-mob">
+									<div class="search-results__body">
+										<div class="search-results__img">
+											<img src="img/icons/no-article.svg" alt="no articles yet">
+										</div>
+										<p class="search-results__title">No articles yet</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</aside>
@@ -196,7 +212,6 @@
 										<p class="search-results__title">No articles yet</p>
 									</div>
 								</div>
-
 								<div class="articles__date">
 									<time class="articles__date-txt" datetime="2023-04-15T17:30:00+03:00">Today</time>
 								</div>
@@ -429,7 +444,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230926212423"></script>
+	<script src="js/app.min.js?_v=20230927140858"></script>
 </body>
 
 </html>

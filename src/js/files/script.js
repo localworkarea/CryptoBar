@@ -4,16 +4,34 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 
+// if (document.querySelector(".filter-open")) {
+//   document.addEventListener("click", function (e) {
+//     if (e.target.closest('.filter-open')) {
+//       document.documentElement.classList.toggle("_open-filter");
+//       if (window.innerWidth <= 700) {
+//         document.documentElement.classList.toggle("lock");
+//       }
+//     }
+//   });
+// };
+
 if (document.querySelector(".filter-open")) {
   document.addEventListener("click", function (e) {
     if (e.target.closest('.filter-open')) {
       document.documentElement.classList.toggle("_open-filter");
       if (window.innerWidth <= 700) {
+          document.documentElement.classList.toggle("lock");
+      }
+    }
+    if (window.innerWidth <= 700) {
+      if (!e.target.closest('.filters__body') && !e.target.closest('.filter-open')) {
+        document.documentElement.classList.toggle("_open-filter");
         document.documentElement.classList.toggle("lock");
       }
     }
   });
-};
+}
+
 
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.querySelector(".search-filters__btn");
