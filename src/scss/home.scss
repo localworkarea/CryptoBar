@@ -844,7 +844,15 @@
       opacity: 0.85;
     }
   }
-
+  // .tag-article_big
+  &_big {
+    margin: 0;
+    @include adaptiveValue("font-size", 20, 12,0,1440,375);
+    @include adaptiveValue("padding-top", 12, 9,0,1440,375);
+    @include adaptiveValue("padding-bottom", 12, 9,0,1440,375);
+    @include adaptiveValue("padding-left", 42, 24,0,1440,375);
+    @include adaptiveValue("padding-right", 42, 24,0,1440,375);
+  }
   // .tag-article_sm
   &_sm {
     margin: 0;
@@ -1287,5 +1295,262 @@
         opacity: 0.85;
       }
     }
+  }
+}
+
+
+//=== One Page Article =================================================================================================
+.head-art {
+  @include adaptiveValue("margin-bottom", 32, 16,0,1440,700);
+  @media (max-width: em(700.98)){
+      background-color: white;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     border-bottom: toRem(1) solid #EBEBEB;
+  }
+  // .head-art__container
+  &__container {
+  }
+  // .head-art__back-link
+  &__back-link {
+    height: toRem(48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+
+    text-align: center;
+    @include adaptiveValue("font-size", 24, 18,0,1440,480);
+    font-weight: 500;
+    line-height: 1;
+    transition: all .3s ease;
+    @media (any-hover: hover){
+      &:hover{
+        opacity: .8;
+      }
+    }
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include adaptiveValue("left", 58, 15,0,1440,375);
+    }
+  }
+}
+
+.art {
+  ul li {
+    list-style: inherit;
+  }
+  p {
+    font-family: "PT Serif";
+    color: #242424;
+    @include adaptiveValue("font-size", 28, 18,0,1440,480);
+    font-weight: 400;
+    line-height: 1.51;
+    letter-spacing: 0.112px;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 12,0,1440,375);
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-style: normal;
+    font-weight: 700;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include adaptiveValue("margin-bottom", 28, 16,0,1440,480);
+  }
+  h1 {
+    @include adaptiveValue("font-size", 36, 26,0,1440,480);
+    font-weight: 700;
+    line-height: 1.47;
+    @include adaptiveValue("margin-bottom", 40, 14,0,1440,480);
+  }
+  h2 {
+    margin-top: toRem(52);
+    @include adaptiveValue("font-size", 32, 22,0,1440,480);
+  }
+  h3 {
+    @include adaptiveValue("font-size", 30, 20,0,1440,480);
+  }
+  h4 {
+    @include adaptiveValue("font-size", 28, 18,0,1440,480);
+  }
+  h5 {
+    @include adaptiveValue("font-size", 26, 16,0,1440,480);
+  }
+  h6 {
+    @include adaptiveValue("font-size", 24, 14,0,1440,480);
+  }
+
+  figure {
+    @include adaptiveValue("margin-bottom", 40, 16,0,1440,480);
+    img {
+      // margin-top: 0;
+      @include adaptiveValue("margin-bottom", 24, 14,0,1440,480);
+    }
+  }
+  figcaption {
+    color: #6B6B6B;
+    @include adaptiveValue("font-size", 22, 12,0,1440,375);
+    font-weight: 500;
+    span {
+      text-decoration: underline;
+    }
+  }
+  img {
+   width: 100%;
+   height: auto; 
+   border-radius: toRem(17);
+  //  @include adaptiveValue("margin-top", 40, 24,0,1440,375);
+   @include adaptiveValue("margin-bottom", 32, 16,0,1440,375);
+  }
+  mark {
+    border-radius: toRem(4);
+    padding: 0 toRem(3);
+    background: #FFBA53;
+  }
+  blockquote {
+    position: relative;
+    border-radius: toRem(13);
+    background: rgba(30, 136, 229, 0.60);
+
+    @include adaptiveValue("padding-top", 20, 13,0,1440,480);
+    @include adaptiveValue("padding-right", 40, 33,0,1440,480);
+    @include adaptiveValue("padding-bottom", 20, 13,0,1440,480);
+    @include adaptiveValue("padding-left", 54, 33,0,1440,480);
+    margin-bottom: toRem(36);
+
+    color: #FFF;
+    font-family: "PT Serif";
+    @include adaptiveValue("font-size", 28, 20,0,1440,480);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.51;
+    letter-spacing: 0.112px;
+
+    &::before {
+      content:'';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include adaptiveValue("left", 29, 12,0,1440,480);
+      @include adaptiveValue("width", 7, 5,0,1440,480);
+      height: 75%;
+      border-radius: 7px;
+      background-color: #FFF;
+    }
+  }
+  // .art__head
+  &__head {
+  }
+  // .art__item
+  &__item {
+  }
+  // .art__container-sm
+  &__container-sm {
+    max-width: toRem(814);
+    margin: 0 auto;
+    @include adaptiveValue("padding-bottom", 32, 24,0,1440,768);
+    @include adaptiveValue("padding-bottom", 120,90,3,700,480);
+    @media (max-width: em(700.98)){
+        padding-top: toRem(65);
+    }
+  }
+	// .art__info
+	&__info {
+	}
+}
+
+.info-art {
+  @include adaptiveValue("margin-bottom", 36, 12,0,1440,480);
+  // .info-art__block
+  &__block {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    row-gap: toRem(6);
+    // align-items: center;
+    &:nth-child(1) {
+      @include adaptiveValue("margin-bottom", 24, 16,0,1440,375);
+      @include adaptiveValue("column-gap", 16, 9,0,1440,480);
+    }
+    &:nth-child(2) {
+      @include adaptiveValue("margin-bottom", 20, 12,0,1440,375);
+      @include adaptiveValue("column-gap", 16, 12,0,1440,480);
+    }
+    &:nth-child(3) {
+      column-gap: toRem(6);
+    }
+  }
+  // .info-art__author
+  &__author {
+    @include adaptiveValue("font-size", 22, 12,0,1440,375);
+    font-weight: 600;
+    line-height: 1;
+  }
+  // .info-art__time
+  &__time {
+    time {
+      color: #C0C1C1;
+    @include adaptiveValue("font-size", 21, 11,0,1440,375);
+    font-weight: 500;
+    line-height: 1;
+    }
+  }
+  // .info-art__tag
+  &__tag {
+  }
+  // .info-art__share
+  &__share {
+    width: fit-content;
+    @include adaptiveValue("height", 48, 33,0,1440,375);
+    border-radius: toRem(30);
+    border: toRem(1) solid #EBEBEB;
+    background-color: #FFF;
+
+    color: #4F4F4F;
+    @include adaptiveValue("font-size", 20, 12,0,1440,375);
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: toRem(9);
+    @include adaptiveValue("padding-left", 27, 14,0,1440,375);
+    @include adaptiveValue("padding-right", 27, 14,0,1440,375);
+    transition: all .3s ease;
+    span {
+      display: inline-block;
+      padding-top: toRem(2);
+    }
+    @media (any-hover: hover){
+      &:hover{
+        background-color: #4f4f4f;
+        color: white;
+      }
+    }
+    &:before {
+      @include adaptiveValue("font-size", 21, 16,0,1440,375);
+    }
+  }
+  // .info-art__hash
+  &__hash {
+    color: #3FAEFF;
+    @include adaptiveValue("font-size", 16, 11,0,1440,375);
+    font-weight: 500;
+    line-height: 0.87;
   }
 }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Article"
+	})
+	<body class="page-article">
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<div class="art__head head-art">
+				<div class="head-art__container">
+					<a href="#" class="head-art__back-link _icon-back">Article</a>
+				</div>
+			</div>
+			<main class="art">
+				<article class="art__item">
+					<div class="art__container-sm">
+						<h1>IDIA and the WHO <br> announce strategic collaboration to support</h1>
+						<div class="art__info info-art">
+							<div class="info-art__block">
+								<div class="info-art__author">Autor Name</div>
+								<div class="info-art__time">
+									<time datetime="2023-01-12">12 January 2023</time>
+								</div>
+							</div>
+							<div class="info-art__block">
+								<a href="#" class="info-art__tag tag-article tag-article_big tag-one">News</a>
+								<a href="#" class="info-art__share _icon-share"><span>Share</span></a>
+							</div>
+							<div class="info-art__block">
+								<a href="#" class="info-art__hash">#Token</a>
+								<a href="#" class="info-art__hash">#ESC</a>
+								<a href="#" class="info-art__hash">#СУД</a>
+								<a href="#" class="info-art__hash">#BTC</a>
+							</div>
+						</div>
+						
+						<figure>
+							<img src="@img/image-2.png" alt="image">
+							<figcaption>Photo by <span>Unsplash</span></figcaption>
+						</figure>
+
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, <b>but also the leap into electronic typesetting,</b> remaining essentially unchanged. </p>
+
+						<h2>Strategic collaboration supports new business</h2>
+
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <mark>standard dummy text ever since the 1500s.</mark></p>
+
+						<img src="@img/image-3.png" alt="image">
+						
+						<blockquote>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						</blockquote>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+					</div>
+				</article>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
