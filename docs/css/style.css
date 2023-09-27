@@ -1411,7 +1411,7 @@ textarea {
 }
 
 .not-found__logo {
-  margin-top: 2rem;
+  display: none;
 }
 
 .not-found__num {
@@ -2435,6 +2435,11 @@ textarea {
 
   .info-login__image {
     margin: 0 7.5rem 1.25rem;
+  }
+
+  .not-found__logo {
+    display: block;
+    margin-top: 2rem;
   }
 }
 

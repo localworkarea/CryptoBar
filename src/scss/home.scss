@@ -1214,7 +1214,11 @@
   }
 	// .not-found__logo
 	&__logo {
-    margin-top: toRem(32);
+    display: none;
+    @media (max-width: em(700.98)){
+        display: block;
+        margin-top: toRem(32);
+    }
 	}
   // .not-found__num
   &__num {
