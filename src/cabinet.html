@@ -6,11 +6,170 @@
 	<body class="page-cabinet">
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="cabinet__main">
-				
+			<main class="cabinet">
+				<div class="cabinet__container">
+					<div class="cabinet__main main-cab">
+						<div class="cabinet__head">
+							<h1 class="cabinet__title">Personal cabinet</h1>
+						</div>
+						<div class="main-cab__body">
+							<div class="main-cab__member">
+								<a href="#" class="main-cab__member-btn member-btn member-btn_buy">
+									<div class="member-btn__image">
+										<img src="@img/icons/logo.png" alt="logo">
+									</div>
+									<div class="member-btn__info">
+										<div class="member-btn__title">Buy our membershhip</div>
+										<div class="member-btn__txt">Read premium articles for $50/month</div>
+									</div>
+								</a>
+								<a href="#" class="main-cab__member-btn member-btn member-btn_basic">
+									<div class="member-btn__image">
+										<img src="@img/icons/logo.png" alt="logo">
+									</div>
+									<div class="member-btn__info">
+										<div class="member-btn__title">Basic Membership</div>
+										<div class="member-btn__txt">Manage subscription</div>
+									</div>
+								</a>
+							</div>
+							<div class="main-cab__menu menu">
+								<div class="menu__item">
+									<h2 class="menu__title">Account</h2>
+									<ul class="menu__list">
+										<li class="menu__li">
+											<button type="button" class="menu__button btn-menu btn-menu-profile _active">
+												<span class="icon _icon-profile"></span>
+												<span class="menu-btn-txt">Profile</span>
+												<span class="_icon-back"></span>
+											</button>
+										</li>
+										<li class="menu__li">
+											<a href="#" class="menu__button">
+												<span class="icon _icon-support"></span>
+												<span class="menu-btn-txt">Support</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="menu__item">
+									<h2 class="menu__title">More</h2>
+									<ul class="menu__list">
+										<li class="menu__li">
+											<button type="button" class="menu__button btn-menu btn-menu-faq">
+												<span class="icon _icon-faq"></span>
+												<span class="menu-btn-txt">FAQ</span>
+												<span class="_icon-back"></span>
+											</button>
+										</li>
+										<!-- <li class="menu__li">
+											<button type="button" class="menu__button btn-menu btn-transaction">
+												<span class="icon _icon-transaction"></span>
+												<span class="menu-btn-txt">My transaction</span>
+												<span class="_icon-back"></span>
+											</button>
+										</li> -->
+									</ul>
+								</div>
+							</div>
+							<div class="main-cab__log">
+								<button type="button" class="main-cab__log-btn btn btn_light-orange">Log Out</button>
+							</div>
+						</div>
+					</div>
+					<div class="cabinet__content content-cab">
+
+						<div class="content-cab__item item-profile _show-item">
+							<div class="content-cab__head">
+								<button type="button" class="content-cab__btn-back _icon-back"></button>
+								<h2 class="content-cab__title">Profile</h2>
+								<button type="button" class="content-cab__edit-btn">Edit</button>
+							</div>
+							<div class="content-cab__content profile-cont">
+								<div class="profile-cont__body-form">
+									<form action="#" class="profile-cont__form">
+										<label class="profile-cont__label">
+											<span class="profile-cont__label-txt">Name</span>
+											<input type="text" name="name" placeholder="Name" value="John Adams" class="profile-cont__input input">
+										</label>
+										<label class="profile-cont__label">
+											<span class="profile-cont__label-txt">Email</span>
+											<input type="email" name="email" placeholder="Email" value="mail@gmail.com" class="profile-cont__input input">
+										</label>
+										<label class="profile-cont__label">
+											<span class="profile-cont__label-txt">Telegram</span>
+											<input type="text" name="name" placeholder="@name" value="@deviart" class="profile-cont__input input" readonly>
+										</label>
+									</form>
+								</div>
+								<div class="profile-cont__save">
+									<button type="button" class="profile-cont__btn btn btn_orange">Save changes</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="content-cab__item item-faq">
+							<div class="content-cab__head">
+								<button type="button" class="content-cab__btn-back _icon-back"></button>
+								<h2 class="content-cab__title">FAQ</h2>
+							</div>
+							<div class="content-cab__content faq-cont">
+								<div data-spollers class="faq-cont__spollers spollers">
+									<details class="spollers__item">
+										<summary class="spollers__button">
+											<div class="spollers__title">What is Lorem Ipsum?</div>
+											<div class="spollers__icon _icon-arr-down"></div>
+										</summary>
+										<div class="spollers__body">
+											<p class="spollers__txt">
+												There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+											</p>
+										</div>
+									</details>
+									<details class="spollers__item">
+										<summary class="spollers__button">
+											<div class="spollers__title">Where can I get some?</div>
+											<div class="spollers__icon _icon-arr-down"></div>
+										</summary>
+										<div class="spollers__body">
+											<p class="spollers__txt">
+												There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+											</p>
+										</div>
+									</details>
+									<details class="spollers__item">
+										<summary class="spollers__button">
+											<div class="spollers__title">Where does it come from?</div>
+											<div class="spollers__icon _icon-arr-down"></div>
+										</summary>
+										<div class="spollers__body">
+											<p class="spollers__txt">
+												There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+											</p>
+										</div>
+									</details>
+									<details class="spollers__item">
+										<summary class="spollers__button">
+											<div class="spollers__title">Why do we use it?</div>
+											<div class="spollers__icon _icon-arr-down"></div>
+										</summary>
+										<div class="spollers__body">
+											<p class="spollers__txt">
+												There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+											</p>
+										</div>
+									</details>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_js.htm',{})
 	</body>
 </html>
+
+

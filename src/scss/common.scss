@@ -37,3 +37,57 @@ textarea {
 		color: white;
 	}
 }
+
+.btn {
+  border-radius: toRem(48);
+  width: 100%;
+  @include adaptiveValue("height", 55, 48,0,1440,480);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: toRem(2) solid transparent;
+
+  @include adaptiveValue("font-size", 20, 16,0,1440,480);
+  font-weight: 600;
+
+  transition: all .3s ease;
+  // .btn_orange
+  &_orange {
+    background-color: #F2994A;
+    color: white;
+    @media (any-hover: hover){
+      &:hover{
+        background-color: white;
+        color: #F2994A;
+				border-color: #F2994A;
+      }
+    }
+  }
+  // .btn_light-orange
+  &_light-orange {
+    border-color: #F2994A;
+    background-color: white;
+    color: #F2994A;
+    @media (any-hover: hover){
+      &:hover{
+        background-color: #F2994A;
+        color: white;
+				
+      }
+    }
+    @media (max-width:$mobileSmall){
+      border: toRem(1) solid #F2994A;
+    }
+  }
+}
+
+.input {
+	outline: none;
+	&::placeholder {
+		transition: opacity 0.3s;
+		color: rgba(60, 60, 67, 0.6);
+	}
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
