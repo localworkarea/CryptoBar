@@ -1179,7 +1179,7 @@
   // .info-login__img
   &__img {
     width: 100%;
-    max-width: toRem(425);
+    max-width: toRem(320);
     height: auto;
   }
   // .info-login__txt
@@ -1336,7 +1336,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      @include adaptiveValue("left", 58, 15,0,1440,375);
+      @include adaptiveValue("left", 58, 0,0,1440,815);
     }
   }
 }
