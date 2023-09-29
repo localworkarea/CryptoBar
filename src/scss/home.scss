@@ -1,4 +1,30 @@
 //====================================================================================================
+.page-index {
+  &::after {
+    @media (max-width: em(700.98)){
+        content:'';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+
+        background: rgba(13, 13, 13, 0.70);
+
+        pointer-events: none;
+        opacity: 0;
+        transition: all .3s ease;
+
+        ._open-filter & {
+          opacity: 1;
+        }
+    }
+  }
+}
 .page {
   display: flex;
   overflow: hidden;
@@ -55,30 +81,7 @@
         display: none;
     }
   }
-  &::after {
-    @media (max-width: em(700.98)){
-        content:'';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
 
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-
-        background: rgba(13, 13, 13, 0.70);
-
-        pointer-events: none;
-        opacity: 0;
-        transition: all .3s ease;
-
-        ._open-filter & {
-          opacity: 1;
-        }
-    }
-  }
   @media (max-width: em(700.98)){
       position: fixed;
       top: 0;
@@ -767,31 +770,15 @@
       }
     }
   }
-	// // .article__more
-	// &__more {
-  //   @include adaptiveValue("font-size", 16, 12,0,1440,480);
-  //   font-weight: 700;
-  //   line-height: 1.15;
-  //   .txt-more {
-  //     ._showmore-active & {
-  //       display: none;
-  //     }
-  //   }
-  //   .txt-less {
-  //     display: none; 
-  //     ._showmore-active & {
-  //       display: block
-  //     }
-  //   }
-	// }
   // .article__texts
   &__texts {
-    @include adaptiveValue("font-size", 16, 12,0,1440,480);
+    @include adaptiveValue("font-size", 16, 13,0,1440,375);
     font-weight: 400;
     line-height: 1.15;
     position: relative;
     overflow: hidden;
-    max-height: toRem(90);
+    // max-height: toRem(90);
+    @include adaptiveValue("max-height", 120, 80,0,1440,375);
   }
 	// .article__link
 	&__link {
@@ -1351,7 +1338,8 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      @include adaptiveValue("left", 58, 0,0,1440,815);
+      left: 0;
+      // @include adaptiveValue("left", 58, 0,0,1440,815);
     }
   }
 }
@@ -1636,6 +1624,7 @@
   right: 0;
   width: 100%;
   z-index: 50;
+  pointer-events: none;
   @include adaptiveValue("padding-bottom", 32, 24,0,1440,768);
   @include adaptiveValue("padding-bottom", 120,90,3,700,480);
   // .up-art__container

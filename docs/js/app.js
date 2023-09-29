@@ -33,8 +33,8 @@
             if (window.innerWidth <= 700) document.documentElement.classList.toggle("lock");
         }
         if (window.innerWidth <= 700) if (!e.target.closest(".filters__body") && !e.target.closest("[data-filter-open]")) {
-            document.documentElement.classList.toggle("_open-filter");
-            document.documentElement.classList.toggle("lock");
+            document.documentElement.classList.remove("_open-filter");
+            document.documentElement.classList.remove("lock");
         }
     }));
     const searchInput = document.getElementById("searchInput");

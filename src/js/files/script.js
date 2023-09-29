@@ -42,8 +42,8 @@ if (document.querySelector("[data-filter-open]")) {
     }
     if (window.innerWidth <= 700) {
       if (!e.target.closest('.filters__body') && !e.target.closest('[data-filter-open]')) {
-        document.documentElement.classList.toggle("_open-filter");
-        document.documentElement.classList.toggle("lock");
+        document.documentElement.classList.remove("_open-filter");
+        document.documentElement.classList.remove("lock");
       }
     }
   });
